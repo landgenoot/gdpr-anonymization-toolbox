@@ -7,7 +7,7 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "start": "babel-node server/server.js --presets es2015,stage-2 ",
+    "start": "nodemon server/server.js --exec babel-node --presets es2015,stage-2",
     "posttest": "npm run lint && nsp check"
   },
   "dependencies": {

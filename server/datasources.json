@@ -2,5 +2,14 @@
   "db": {
     "name": "db",
     "connector": "memory"
+  },
+  "mysql": {
+    "host": "mysql.cliuvbtd2kgx.eu-central-1.rds.amazonaws.com",
+    "port": 3306,
+    "username": "master",
+    "password": "master999",
+    "name": "mysql",
+    "connector": "mysql",
+    "database": "peng"
   }
 }

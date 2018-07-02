@@ -1,6 +1,6 @@
 'use strict'
 
-module.exports = function (Citizen) {
+export default function (Citizen) {
   /**
    * Overwrite the current find function in order
    * to do the anonymization
@@ -10,7 +10,7 @@ module.exports = function (Citizen) {
     Citizen.find = (filter, user, cb) => {
       filter = filter || {} || 1
       filter.limit = 100
-      originalFind.call(this, filter, (err, result) => {
+      originalFind.call(Citizen, filter, (err, result) => {
         return cb(err, result)
       })
     }

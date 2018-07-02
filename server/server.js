@@ -4,7 +4,7 @@ import boot from 'loopback-boot'
 
 var app = module.exports = loopback()
 
-export function start () {
+app.start = function () {
   // start the web server
   return app.listen(function () {
     app.emit('started')
@@ -23,5 +23,5 @@ boot(app, __dirname, function (err) {
   if (err) throw err
 
   // start the server if `$ node server.js`
-  if (require.main === module) { start() }
+  if (require.main === module) { app.start() }
 })

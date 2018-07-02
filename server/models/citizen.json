@@ -7,49 +7,65 @@
     "validateUpsert": true
   },
   "properties": {
-    "SSN": {
+    "age": {
       "type": "number",
-      "required": true
+      "qi": true
     },
-    "name": {
+    "workclass": {
       "type": "string",
-      "required": true
+      "qi": true,
+      "category": true
     },
-    "dateOfBirth": {
-      "type": "date",
-      "required": true
+    "finalWeight": {
+      "type": "number"
     },
-    "streetAddress": {
-      "type": "string",
-      "required": true
+    "education": {
+      "type": "string"
     },
-    "city": {
-      "type": "string",
-      "required": true
-    },
-    "zip": {
+    "educationNum": {
       "type": "number",
-      "required": true
+      "qi": true
     },
-    "phoneNumber": {
+    "maritalStatus": {
       "type": "string",
-      "required": true
+      "qi": true,
+      "category": true
     },
-    "IBAN": {
+    "occupation": {
       "type": "string",
-      "required": true
+      "qi": true,
+      "category": true
     },
-    "salary": {
-      "type": "number",
-      "required": true
+    "relationship": {
+      "type": "string"
     },
-    "jobTitle": {
+    "race": {
       "type": "string",
-      "required": true
+      "qi": true,
+      "category": true
     },
-    "nationality": {
+    "sex": {
       "type": "string",
-      "required": true
+      "qi": true,
+      "category": true
+    },
+    "capitalGain": {
+      "type": "number"
+    },
+    "capitalLoss": {
+      "type": "number"
+    },
+    "hoursPerWeek": {
+      "type": "number"
+    },
+    "nativeCountry": {
+      "type": "string",
+      "qi": true,
+      "category": true
+    },
+    "class": {
+      "type": "string",
+      "sensitive": true
     }
   },
   "validations": [],

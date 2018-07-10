@@ -15,4 +15,19 @@ export default function (Citizen) {
       })
     }
   })
+
+  Citizen.disableRemoteMethodByName('create')
+  Citizen.disableRemoteMethodByName('upsert')
+  Citizen.disableRemoteMethodByName('deleteById')
+  Citizen.disableRemoteMethodByName('updateAll')
+  Citizen.disableRemoteMethodByName('prototype.updateAttributes')
+  Citizen.disableRemoteMethodByName('createChangeStream')
+  Citizen.disableRemoteMethodByName('upsertWithWhere')
+  Citizen.disableRemoteMethodByName('replaceOrCreate')
+  Citizen.disableRemoteMethodByName('findOne')
+  Citizen.disableRemoteMethodByName('count')
+  Citizen.disableRemoteMethodByName('replace')
+  Citizen.disableRemoteMethodByName('exists')
+  Citizen.disableRemoteMethodByName('replaceById')
+  Citizen.disableRemoteMethodByName('findById')
 }

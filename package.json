@@ -8,6 +8,7 @@
   "scripts": {
     "lint": "eslint .",
     "start": "DEBUG=app:* nodemon server/server.js --exec babel-node --presets es2015,stage-2",
+    "migrate": "DEBUG=app:* MIGRATE=1 nodemon server/server.js --exec babel-node --presets es2015,stage-2",
     "posttest": "npm run lint && nsp check"
   },
   "dependencies": {

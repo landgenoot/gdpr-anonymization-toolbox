@@ -9,11 +9,13 @@ const debug = require('debug')('app:migration')
  * @param {LoopbackServer} server
  */
 module.exports = function generateData (app) {
-  var ds = app.dataSources.mysql
-  // ds.automigrate(async function () {
-  //   debug('Starting migration')
-  //   app.models.Citizen.create(citizens).then(result => {
-  //     debug('Migration complete')
-  //   })
-  // })
+  if (process.env.MIGRATE === '1') {
+    var ds = app.dataSources.mysql
+    ds.automigrate(async function () {
+      debug('Starting migration')
+      app.models.Citizen.create(citizens).then(result => {
+        debug('Migration complete')
+      })
+    })
+  }
 }

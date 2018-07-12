@@ -11,14 +11,15 @@ export default function (Citizen) {
     const originalFind = Citizen.find
     Citizen.find = (filter, user, cb) => {
       filter = filter || {} || 1
-      filter.limit = 1
+      filter.limit = 200
       let k = (filter.k > 3 && filter.k < 15) ? filter.k : 3
       let l = (filter.l > 3 && filter.l < 15) ? filter.l : 3
       originalFind.call(Citizen, filter, async (err, result) => {
         const attributes = Citizen.definition.properties
         const kanonymized = await mondrian.kAnonymity(result, attributes, k)
-        const lanonymized = await mondrian.lDiversity(kanonymized, attributes, l)
-        return cb(err, lanonymized)
+        //const ldiversed = await mondrian.lDiversity(kanonymized, attributes, l)
+        const shuffled = kanonymized.sort(() => Math.random() - 0.5)
+        return cb(err, shuffled)
       })
     }
   })

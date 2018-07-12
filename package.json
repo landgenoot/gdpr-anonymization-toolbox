@@ -16,11 +16,11 @@
     "cors": "^2.5.2",
     "faker": "^4.1.0",
     "helmet": "^3.10.0",
-    "loopback": "^3.19.0",
+    "loopback": "^3.21.0",
     "loopback-boot": "^2.6.5",
-    "loopback-component-explorer": "^6.0.0",
+    "loopback-component-explorer": "^6.1.0",
     "loopback-connector-mysql": "^5.2.0",
-    "node-mondrian": "^1.0.1",
+    "node-mondrian": "^1.0.3",
     "serve-favicon": "^2.0.1",
     "strong-error-handler": "^2.0.0"
   },
@@ -30,7 +30,7 @@
     "babel-preset-stage-2": "^6.24.1",
     "eslint": "^3.17.1",
     "eslint-config-loopback": "^8.0.0",
-    "nodemon": "^1.17.5",
+    "nodemon": "^1.18.1",
     "nsp": "^2.1.0"
   },
   "repository": {

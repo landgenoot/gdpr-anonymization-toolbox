@@ -37,7 +37,8 @@
       "category": true
     },
     "relationship": {
-      "type": "string"
+      "type": "string",
+      "sensitive": true
     },
     "race": {
       "type": "string",
@@ -64,8 +65,7 @@
       "category": true
     },
     "class": {
-      "type": "string",
-      "sensitive": true
+      "type": "string"
     }
   },
   "validations": [],

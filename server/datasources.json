@@ -4,12 +4,21 @@
     "connector": "memory"
   },
   "mysql": {
-    "host": "mysql.cliuvbtd2kgx.eu-central-1.rds.amazonaws.com",
+    "host": "localhost",
     "port": 3306,
-    "username": "master",
-    "password": "master999",
+    "username": "root",
+    "password": "",
     "name": "mysql",
     "connector": "mysql",
     "database": "peng"
+  },
+  "mongo": {
+    "host": "localhost",
+    "port": 27017,
+    "url":  "",
+    "database": "peng",
+    "password": "",
+    "name": "mongo",
+    "connector": "mongodb"  
   }
 }
